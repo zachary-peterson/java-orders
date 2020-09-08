@@ -22,14 +22,9 @@ public class Payment
     {
     }
 
-    public Payment(
-        long paymentid,
-        String type,
-        Set<Order> orders)
+    public Payment(String type)
     {
-        this.paymentid = paymentid;
         this.type = type;
-        this.orders = orders;
     }
 
     public long getPaymentid()

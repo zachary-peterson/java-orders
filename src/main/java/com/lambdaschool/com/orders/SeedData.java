@@ -1,23 +1,17 @@
-package com.lambdaschool.crudyorders;
+package com.lambdaschool.com.orders;
 
-import com.github.javafaker.Faker;
-import com.lambdaschool.crudyorders.models.Agent;
-import com.lambdaschool.crudyorders.models.Customer;
-import com.lambdaschool.crudyorders.models.Order;
-import com.lambdaschool.crudyorders.models.Payment;
-import com.lambdaschool.crudyorders.repositories.AgentsRepository;
-import com.lambdaschool.crudyorders.repositories.CustomersRepository;
-import com.lambdaschool.crudyorders.repositories.OrdersRepository;
-import com.lambdaschool.crudyorders.repositories.PaymentRepository;
+import com.lambdaschool.com.orders.models.Agent;
+import com.lambdaschool.com.orders.models.Customer;
+import com.lambdaschool.com.orders.models.Order;
+import com.lambdaschool.com.orders.models.Payment;
+import com.lambdaschool.com.orders.repositories.AgentsRepository;
+import com.lambdaschool.com.orders.repositories.CustomersRepository;
+import com.lambdaschool.com.orders.repositories.OrdersRepository;
+import com.lambdaschool.com.orders.repositories.PaymentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Set;
 
 
 @Transactional
@@ -28,7 +22,7 @@ public class SeedData implements CommandLineRunner
      * Connects the customer table to this SeedData method
      */
     @Autowired
-    private CustomersRepository custrepos;
+    private CustomersRepository customrepos;
 
     /**
      * Connects the agents table to this SeedData method
@@ -46,7 +40,7 @@ public class SeedData implements CommandLineRunner
      * Connects the payment table to this SeedData method
      */
     @Autowired
-    private PaymentRepository paymentrepos;
+    private PaymentsRepository paymentrepos;
 
     /**
      * Generates test, seed data for our application
@@ -494,31 +488,31 @@ public class SeedData implements CommandLineRunner
         agentrepos.save(a11);
         agentrepos.save(a12);
 
-        custrepos.save(c01);
-        custrepos.save(c02);
-        custrepos.save(c03);
-        custrepos.save(c04);
-        custrepos.save(c05);
-        custrepos.save(c06);
-        custrepos.save(c07);
-        custrepos.save(c08);
-        custrepos.save(c09);
-        custrepos.save(c10);
-        custrepos.save(c11);
-        custrepos.save(c12);
-        custrepos.save(c13);
-        custrepos.save(c14);
-        custrepos.save(c15);
-        custrepos.save(c16);
-        custrepos.save(c17);
-        custrepos.save(c18);
-        custrepos.save(c19);
-        custrepos.save(c20);
-        custrepos.save(c21);
-        custrepos.save(c22);
-        custrepos.save(c23);
-        custrepos.save(c24);
-        custrepos.save(c25);
+        customrepos.save(c01);
+        customrepos.save(c02);
+        customrepos.save(c03);
+        customrepos.save(c04);
+        customrepos.save(c05);
+        customrepos.save(c06);
+        customrepos.save(c07);
+        customrepos.save(c08);
+        customrepos.save(c09);
+        customrepos.save(c10);
+        customrepos.save(c11);
+        customrepos.save(c12);
+        customrepos.save(c13);
+        customrepos.save(c14);
+        customrepos.save(c15);
+        customrepos.save(c16);
+        customrepos.save(c17);
+        customrepos.save(c18);
+        customrepos.save(c19);
+        customrepos.save(c20);
+        customrepos.save(c21);
+        customrepos.save(c22);
+        customrepos.save(c23);
+        customrepos.save(c24);
+        customrepos.save(c25);
 
         ordersrepos.save(o01);
         ordersrepos.save(o02);

@@ -21,29 +21,32 @@ public class Agent
         orphanRemoval = true)
     private List<Customer> customers = new ArrayList<>();
 
+    public List<Customer> getCustomers()
+    {
+        return customers;
+    }
+
+    public void setCustomers(List<Customer> customers)
+    {
+        this.customers = customers;
+    }
 
     public Agent()
     {
     }
 
     public Agent(
-        long agentcode,
         String agentname,
         String workingarea,
         double commission,
         String phone,
         String country)
     {
-        this.agentcode = agentcode;
         this.agentname = agentname;
         this.workingarea = workingarea;
         this.commission = commission;
         this.phone = phone;
         this.country = country;
-    }
-
-    public Agent(String agentname,)
-    {
     }
 
     public long getAgentcode()
@@ -105,4 +108,6 @@ public class Agent
     {
         this.country = country;
     }
+
+
 }

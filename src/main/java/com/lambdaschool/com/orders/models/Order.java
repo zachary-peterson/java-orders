@@ -28,7 +28,7 @@ public class Order
     @JoinTable(name = "orderspayments",
         joinColumns = @JoinColumn(name = "ordnum"),
         inverseJoinColumns = @JoinColumn(name = "paymentid"))
-    @JsonIgnoreProperties(value = "orders", allowSetters = true)
+//    @JsonIgnoreProperties(value = "orders", allowSetters = true)
     Set<Payment> payments = new HashSet<>();
 
     public Order()
@@ -36,19 +36,15 @@ public class Order
     }
 
     public Order(
-        long ordnum,
         double ordamount,
         double advanceamount,
         Customer customer,
-        String orderdescription,
-        Set<Payment> payments)
+        String orderdescription)
     {
-        this.ordnum = ordnum;
         this.ordamount = ordamount;
         this.advanceamount = advanceamount;
         this.customer = customer;
         this.orderdescription = orderdescription;
-        this.payments = payments;
     }
 
     public long getOrdnum()
@@ -109,5 +105,10 @@ public class Order
     public void setPayments(Set<Payment> payments)
     {
         this.payments = payments;
+    }
+
+    public void addPayments(Payment pay1)
+    {
+        this.payments.add(pay1);
     }
 }
