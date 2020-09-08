@@ -1,7 +1,6 @@
 package com.lambdaschool.com.orders.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.criterion.Order;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +13,8 @@ public class Customer
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long custcode;
+
+    @Column(nullable = false)
     private String custname;
     private String custcity;
     private String workingarea;

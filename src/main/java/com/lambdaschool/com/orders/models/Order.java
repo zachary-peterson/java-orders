@@ -28,7 +28,7 @@ public class Order
     @JoinTable(name = "orderspayments",
         joinColumns = @JoinColumn(name = "ordnum"),
         inverseJoinColumns = @JoinColumn(name = "paymentid"))
-//    @JsonIgnoreProperties(value = "orders", allowSetters = true)
+    @JsonIgnoreProperties(value = "orders", allowSetters = true)
     Set<Payment> payments = new HashSet<>();
 
     public Order()
